@@ -1,25 +1,25 @@
 #entrante maindish bebidas porciones postres armar menu mostrar
 class MenuItem:
     def __init__(self,nombre:str,precio:int,tipo:str):
-        self.nombre = nombre
-        self.tipo = tipo
-        self.precio = precio
+        self.__nombre = nombre
+        self.__tipo = tipo
+        self.__precio = precio
 
     def __repr__(self):
         return str(self.__dict__)      
 
     def set_nombre(self,nombre:str):
-        self.nombre=nombre
+        self.__nombre=nombre
     def get_nombre(self):
-        return self.nombre
+        return self.__nombre
     def set_tipo(self,tipo:str):
-        self.tipo=tipo
+        self.__tipo=tipo
     def get_tipo(self):
-        return self.tipo
+        return self.__tipo
     def set_precio(self,precio:float):
-        self.precio=precio
+        self.__precio=precio
     def get_precio(self):
-        return self.precio
+        return self.__precio
     
 class MainDish(MenuItem):
     def __init__(self, nombre, precio, tipo="Main Dish"):
